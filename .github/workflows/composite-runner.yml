@@ -11,6 +11,6 @@ jobs:
       - id: foo
         uses: nickbenedetti/gha-composite@1.1.5
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: ${${{ github.repository }}#*/}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
